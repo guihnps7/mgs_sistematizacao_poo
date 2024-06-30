@@ -18,7 +18,7 @@ class Api::V1::FuncionariosController < ApplicationController
 
     if funcionario[:matricula] && funcionario[:nome] && funcionario[:informacao_medica] && funcionario[:telefone] && funcionario[:email]
       @@funcionario[funcionario[:matricula]] = funcionario
-      render json: funcionario, status: :created
+      render json: { message: 'Funcionário cadastrado com sucesso', funcionario: funcionario }, status: :created
     else
       render json: { error: 'Erro ao cadastrar funcionário' }, status: :unprocessable_entity
     end

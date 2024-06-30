@@ -1,0 +1,119 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '2.6.6'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'jwt'
+gem 'mimemagic', '~> 0.3.7'
+gem 'rails', '~> 5'
+gem 'rails-i18n', '~> 5'
+gem 'sass'
+
+# Use Puma as the app server
+gem 'puma', '~> 3'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier'
+
+# Database
+gem 'bcrypt'
+gem 'cancancan-mongoid'
+gem 'csv'
+gem 'database_cleaner'
+gem 'mongoid', '~> 6'
+gem 'mongoid-paperclip'
+gem 'mongoid_migrations'
+gem 'mongoid_paranoia'
+gem 'mongoid_search'
+gem 'roda'
+gem 'shrine-gridfs'
+gem 'shrine-mongoid'
+gem 'validates_timeliness'
+
+# Image processing
+gem 'image_processing', require: ['image_processing', 'image_processing/mini_magick']
+
+# Webpack
+gem 'grape'
+gem 'grape-active_model_serializers'
+gem 'react-rails'
+gem 'webpacker', '~> 4.x'
+
+# Forms
+gem 'cocoon'
+gem 'cpf_cnpj'
+gem 'jquery-rails'
+gem 'rest-client'
+gem 'telephone_number'
+gem 'validators'
+
+
+# Pagination
+gem 'kaminari-actionview'
+gem 'kaminari-mongoid'
+
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 4.0'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', require: false
+
+
+# Sentry Error Monitoring
+gem 'sentry-rails'
+gem 'sentry-ruby'
+
+# Background jobs
+gem 'sidekiq', require: ['sidekiq', 'sidekiq/web']
+gem 'sidekiq-cron', require: ['sidekiq/cron', 'sidekiq/cron/web']
+
+# Solution for geocoding
+gem 'geocoder'
+
+# JavaScript charts
+gem 'chartkick'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.5'
+
+# solução de pagamento
+gem 'anti_captcha'
+gem 'moip2'
+gem 'rqrcode', '~> 2.0'
+gem 'simple_command'
+
+# inputmask
+gem 'inputmask-rails'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'codacy-coverage', require: false
+  # Generate fake data with faker to development purposes
+  # gem 'faker', github: 'stympy/faker', '~> 1.0.1'
+  # Run tests with rspec
+  gem 'awesome_print'
+  gem 'dotenv', require: 'dotenv/rails-now'
+  gem 'dotenv-rails', groups: %i[development test]
+  gem 'factory_bot_rails'
+  gem 'i18n-debug'
+  gem 'pry-rails'
+  gem 'rails-controller-testing'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'rubocop'
+end
+
+group :development do
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'listen'
+  gem 'web-console'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen'
+end
+
+
